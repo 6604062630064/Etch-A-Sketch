@@ -1,0 +1,28 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-width: 600px;
+    min-height: 600px;
+    max-width: 600px;
+    max-height: 600px;
+    border: solid black;
+    margin: auto;
+    margin-top: 130px;
+    justify-content: space-between;
+    
+}
+
+.column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.column > div {
+    aspect-ratio : 1 / 1;
+    flex: auto;
+    border: solid grey;
+    border-width: thin;
+}
