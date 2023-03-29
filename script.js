@@ -1,3 +1,14 @@
+function changeColor(e) {
+   e.target.classList.add("hovered");
+
+}
+
+function removeColor(e) {
+    e.target.classList.remove("hovered");
+}
+
+
+
 const container = document.querySelector(".container");
 const div = document.createElement("div");
 
@@ -13,4 +24,11 @@ for (i = 0; i < 16; i++){
 for (j = 0; j < 16; j++){
     container.appendChild(div.cloneNode(true));
 }
+
+const boxes = document.querySelectorAll(".column > div");
+
+boxes.forEach((box) => {
+    box.addEventListener('mouseover', changeColor);
+    box.addEventListener('transitionend', removeColor);
+})
 
